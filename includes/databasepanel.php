@@ -1,55 +1,55 @@
-<div class="col-12 col-xl-3 p-1 border rounded shadow">
-    <button type="submit" class="btn btn-block" style="" disabled id="serverstatus">Connection to server status </button>
-    <?php if(connectionToServerStatus() == true) {//jeigu prisijungimas prie serverio yra galimas , grazinama true reiksme ir padaromas mygtukas y zalia, o jei ne y raudona.
-                                                  //bei darasoma mygutko value += true arba += false
-        echo "<script>changeButtonStatusTo('green','serverstatus');</script>"; 
-    } 
-    else{
-        echo "<script>changeButtonStatusTo('red','serverstatus');</script>"; 
-    }
-    ?>
 
-</div>
+<div class="col-12 card border rounded shadow-lg p-0" style="margin-bottom: 50px;">
+<div class="card-body card-content" style="padding-bottom: 5px; padding-top: 5px;">
 
-<div class="col-12 col-xl-3 p-1 border rounded shadow">
-    <button type="submit" class="btn btn-block" style="" disabled id="databasestatus">Connection to database status </button>
-    <?php if(connectionToDatabaseStatus() == true) {//jeigu prisijungimas prie duomenu bazes yra galimas , grazinama true reiksme ir padaromas mygtukas y zalia, o jei ne y raudona.
-                                                  //bei darasoma mygutko value += true arba += false
-        echo "<script>changeButtonStatusTo('green','databasestatus');</script>"; 
-    } 
-    else{
-        echo "<script>changeButtonStatusTo('red','databasestatus');</script>"; 
-    }
-    ?>
+<div class="row">
+    <div class="col-12 col-xl-3 p-1 border rounded shadow">
+        <button type="submit" class="btn btn-block" style="" disabled id="serverstatus">Connection to server status </button>
+        <?php if(connectionToServerStatus() == true) {//jeigu prisijungimas prie serverio yra galimas , grazinama true reiksme ir padaromas mygtukas y zalia, o jei ne y raudona.
+            echo "<script>changeButtonStatusTo('green','serverstatus');</script>";//bei darasoma mygutko value += true arba += false
+        } 
+        else{
+            echo "<script>changeButtonStatusTo('red','serverstatus');</script>"; 
+        }
+        ?>
+    </div>
 
-</div>
+    <div class="col-12 col-xl-3 p-1 border rounded shadow">
+        <button type="submit" class="btn btn-block" style="" disabled id="databasestatus">Connection to database status </button>
+        <?php if(connectionToDatabaseStatus() == true) {//jeigu prisijungimas prie duomenu bazes yra galimas , grazinama true reiksme ir padaromas mygtukas y zalia, o jei ne y raudona.
+            echo "<script>changeButtonStatusTo('green','databasestatus');</script>";//bei darasoma mygutko value += true arba += false
+        } 
+        else{
+            echo "<script>changeButtonStatusTo('red','databasestatus');</script>"; 
+        }
+        ?>
 
-<div class="col-12 col-xl-3 p-1 border rounded shadow">
-    <button type="submit" class="btn btn-primary btn-block" style="" disabled id="tablestatus">Connection to table</button>
-    <?php if(connectionToTableStatus() == true) {//jeigu prisijungimas prie lenteles yra galimas , grazinama true reiksme ir padaromas mygtukas y zalia, o jei ne y raudona.
-                                                  //bei darasoma mygutko value += true arba += false
-       echo "<script>changeButtonStatusTo('green','tablestatus');</script>";
-    } 
-    else{
-        echo "<script>changeButtonStatusTo('red','tablestatus');</script>";
-    }
-    ?>
+    </div>
 
-</div>
+    <div class="col-12 col-xl-3 p-1 border rounded shadow">
+        <button type="submit" class="btn btn-primary btn-block" style="" disabled id="tablestatus">Connection to table</button>
+        <?php if(connectionToTableStatus() == true) {//jeigu prisijungimas prie lenteles yra galimas , grazinama true reiksme ir padaromas mygtukas y zalia, o jei ne y raudona.
+        echo "<script>changeButtonStatusTo('green','tablestatus');</script>";//bei darasoma mygutko value += true arba += false
+        } 
+        else{
+            echo "<script>changeButtonStatusTo('red','tablestatus');</script>";
+        }
+        ?>
 
-<div class="col-12 col-xl-3 p-1 border rounded shadow">
-    <button type="submit" class="btn btn-block" style="" disabled id="adminstatus">Does admin exist</button>
+    </div>
 
-    <?php if(doesAdminExist() == true) {//jeigu prisijungimas prie admin user yra galimas , grazinama true reiksme ir padaromas mygtukas y zalia, o jei ne y raudona.
-                                        //bei darasoma mygutko value += true arba += false
-        echo "<script>changeButtonStatusTo('green','adminstatus');</script>"; 
-    } 
-    else{
-        echo "<script>changeButtonStatusTo('red','adminstatus');</script>"; 
-    }
-    ?>
-    
-</div>
+    <div class="col-12 col-xl-3 p-1 border rounded shadow">
+        <button type="submit" class="btn btn-block" style="" disabled id="adminstatus">Does admin exist</button>
+
+        <?php if(doesAdminExist() == true) {//jeigu prisijungimas prie admin user yra galimas , grazinama true reiksme ir padaromas mygtukas y zalia, o jei ne y raudona.
+            echo "<script>changeButtonStatusTo('green','adminstatus');</script>"; //bei darasoma mygutko value += true arba += false
+        } 
+        else{
+            echo "<script>changeButtonStatusTo('red','adminstatus');</script>"; 
+        }
+        ?>
+        
+    </div>
 
 
 
@@ -119,3 +119,6 @@
     
 
 </form>
+</div>
+</div>
+</div>

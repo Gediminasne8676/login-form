@@ -4,6 +4,39 @@ include "database.php";
 session_start();
 ob_start();
 
+function login_user($username, $password){//prisijungimo funkcija
+    global $connection;//atsitempiam global connection kintamaji
+    
+        $result = mysqli_query($connection, "SELECT password FROM users WHERE username = '{$username}'");//pasiemam slaptazodi is duomenu bazes
+        confirmQuery($result);
+
+        $hash = mysqli_fetch_array($result);//isgaudanam masyva is uzklausos
+        $hash = $hash['password'];//isgaunam slaptazodi is uzklausos
+        
+        if(password_verify($password,$hash)){//tikrinam ar ivestas slaptazodis tinka su slaptazodziu duomenu bazej
+//prisijungt pavyko
+            $query = "SELECT * FROM users WHERE username = '{$username}' ";
+            $select_user_query = mysqli_query($connection, $query);
+            confirmQuery($select_user_query);
+            
+            while($row = mysqli_fetch_array($select_user_query)){//pritaikom kintamiesiams user reiksmes
+                $db_user_id = $row['user_id'];
+                $db_username = $row['username'];
+                $db_password = $row['password'];
+            }
+
+        $_SESSION['user_id'] = $db_user_id;//sesijai priskirta kintamieji
+        $_SESSION['username'] = $username;
+        // $_SESSION['password'] = $password;//zinau jog negalima laikyt passwordu sesijoje
+        
+        header("Location: ../index.php");//po prisijungimo persiunciama i index.php
+
+        } 
+        else {
+            header("Location: ../index.php");//jeigu neiseina prisijungti vistiek persiunciama i index.php
+        }
+}
+
 if(isset($_POST['login'])){//jeigu paspaudziama login mygtukas
 global $connection;
 
