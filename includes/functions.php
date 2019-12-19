@@ -99,6 +99,44 @@ function createTable(){//funkcija skirta sukurti lentele users
     
         $result = mysqli_query($connection, $query);//siuncama uzklausa
         confirmQuery($result);//tikrinama uzklausa
+
+        $query = "CREATE TABLE `table`";
+        $query .=" ( `row_id` INT(255) NOT NULL AUTO_INCREMENT ,";
+        $query .=" `col_A` VARCHAR(255) NOT NULL ,";
+        $query .=" `col_B` VARCHAR(255) NOT NULL ,";
+        $query .=" `col_C` VARCHAR(255) NOT NULL ,";
+        $query .=" `col_D` VARCHAR(255) NOT NULL ,";
+        $query .=" `col_E` VARCHAR(255) NOT NULL ,";
+        $query .=" `col_F` VARCHAR(255) NOT NULL ,";
+        $query .=" `col_G` VARCHAR(255) NOT NULL ,";
+        $query .="PRIMARY KEY (`row_id`)) ENGINE = InnoDB;";
+        $result = mysqli_query($connection, $query);//siuncama uzklausa
+        confirmQuery($result);//tikrinama uzklausa
+
+        $query = "INSERT INTO `table` (`row_id`, `col_A`, `col_B`, `col_C`, `col_D`, `col_E`, `col_F`, `col_G`) VALUES (NULL, '', '', '', '', '', '', '');";//kuriame reiksmes table lentelej
+        $result = mysqli_query($connection, $query);//siuncama uzklausa
+        confirmQuery($result);//tikrinama uzklausa
+        $query = "INSERT INTO `table` (`row_id`, `col_A`, `col_B`, `col_C`, `col_D`, `col_E`, `col_F`, `col_G`) VALUES (NULL, '', '', '', '', '', '', '');";//kuriame reiksmes table lentelej
+        $result = mysqli_query($connection, $query);//siuncama uzklausa
+        confirmQuery($result);//tikrinama uzklausa
+        $query = "INSERT INTO `table` (`row_id`, `col_A`, `col_B`, `col_C`, `col_D`, `col_E`, `col_F`, `col_G`) VALUES (NULL, '', '', '', '', '', '', '');";//kuriame reiksmes table lentelej
+        $result = mysqli_query($connection, $query);//siuncama uzklausa
+        confirmQuery($result);//tikrinama uzklausa
+        $query = "INSERT INTO `table` (`row_id`, `col_A`, `col_B`, `col_C`, `col_D`, `col_E`, `col_F`, `col_G`) VALUES (NULL, '', '', '', '', '', '', '');";//kuriame reiksmes table lentelej
+        $result = mysqli_query($connection, $query);//siuncama uzklausa
+        confirmQuery($result);//tikrinama uzklausa
+        $query = "INSERT INTO `table` (`row_id`, `col_A`, `col_B`, `col_C`, `col_D`, `col_E`, `col_F`, `col_G`) VALUES (NULL, '', '', '', '', '', '', '');";//kuriame reiksmes table lentelej
+        $result = mysqli_query($connection, $query);//siuncama uzklausa
+        confirmQuery($result);//tikrinama uzklausa
+        $query = "INSERT INTO `table` (`row_id`, `col_A`, `col_B`, `col_C`, `col_D`, `col_E`, `col_F`, `col_G`) VALUES (NULL, '', '', '', '', '', '', '');";//kuriame reiksmes table lentelej
+        $result = mysqli_query($connection, $query);//siuncama uzklausa
+        confirmQuery($result);//tikrinama uzklausa
+        $query = "INSERT INTO `table` (`row_id`, `col_A`, `col_B`, `col_C`, `col_D`, `col_E`, `col_F`, `col_G`) VALUES (NULL, '', '', '', '', '', '', '');";//kuriame reiksmes table lentelej
+        $result = mysqli_query($connection, $query);//siuncama uzklausa
+        confirmQuery($result);//tikrinama uzklausa
+        $query = "INSERT INTO `table` (`row_id`, `col_A`, `col_B`, `col_C`, `col_D`, `col_E`, `col_F`, `col_G`) VALUES (NULL, '', '', '', '', '', '', '');";//kuriame reiksmes table lentelej
+        $result = mysqli_query($connection, $query);//siuncama uzklausa
+        confirmQuery($result);//tikrinama uzklausa
     
     }
 

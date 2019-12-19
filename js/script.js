@@ -36,3 +36,5 @@ $('#register-form-tab').click(function(e){//kuomen paspaudziama korteles navigat
     $(this).addClass('active');//nuspaudziam korteles kita nav mygtuka
     e.preventDefault();//sustabdom evento vykyma
 });
+
+

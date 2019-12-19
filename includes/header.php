@@ -24,4 +24,8 @@ input{
 button{
     height: 100px;
 }
+
+th{
+    text-align: center;
+}
 </style>
