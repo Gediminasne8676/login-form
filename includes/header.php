@@ -1,4 +1,9 @@
 
+ <?php 
+ ob_start();
+ session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +14,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js" ></script>
+<!-- JavaScript pagrindinis funkciju failas -->
+    <script type="text/javascript" src="js/functions.js"></script>
+
     <title>Login-form</title>
 <style>
 input{
@@ -29,3 +37,4 @@ th{
     text-align: center;
 }
 </style>
+</head>

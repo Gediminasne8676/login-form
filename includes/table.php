@@ -1,9 +1,4 @@
-<?php include "includes/header.php"?>
-<?php include "includes/functions.php"?>
-<?php include "includes/database.php"?>
-<?php session_start();?>
 
-</head>
 
 <?php 
 //paspaudus mygtukui save siunciama visa lentele atgal y duomenu baze taip atnaujina informacija
@@ -35,30 +30,27 @@ if(isset($_POST['save'])){//suveikia jeigu is formos atsiunciamas jog yra nuspau
     $result = mysqli_query($connection, $query);
     confirmQuery($result);
   }
-  header("Refresh:0");//refreshinam svetaine nes nevisada refreshinas
+//   header("Refresh:0");//refreshinam svetaine nes nevisada refreshinas
 }
 ?>
 
-<body>
-
-<div class="container" style="">
-  <div class="col-12 card border rounded shadow-lg p-2" style="margin-bottom: 50px;">
+<div class="col-12 card border rounded shadow-lg p-2" style="margin-bottom: 50px;">
 
     <div class="col-12 col-xl-12">
 
-    <form action="table.php" method="post" id="" style="">
+    <form action="index.php" method="post" id="" style="">
       <table class="" id="table">
         <thead>
           <tr>
             <th scope="col">#</th>
             <th scope="col">row_id</th>
-            <th scope="col" id="cell_1">col_A</th>
-            <th scope="col" id="cell_2">col_B</th>
-            <th scope="col" id="cell_3">col_C</th>
-            <th scope="col" id="cell_4">col_D</th>
-            <th scope="col" id="cell_5">col_E</th>
-            <th scope="col" id="cell_6">col_F</th>
-            <th scope="col" id="cell_7">col_G</th>
+            <th scope="col" id="cell01">col_A</th>
+            <th scope="col" id="cell02">col_B</th>
+            <th scope="col" id="cell03">col_C</th>
+            <th scope="col" id="cell04">col_D</th>
+            <th scope="col" id="cell05">col_E</th>
+            <th scope="col" id="cell06">col_F</th>
+            <th scope="col" id="cell07">col_G</th>
             <th></th>
           </tr>
         </thead>
@@ -121,18 +113,4 @@ if(isset($_POST['save'])){//suveikia jeigu is formos atsiunciamas jog yra nuspau
     </div>
   </div>
 
-
-                <script type="text/javascript" src="js/script.js"></script>
-                <script type="text/javascript" src="js/table.js"></script>
-                <?php include "includes/databasepanel.php"?>
-
-</div>
-
-
-<?php 
-
-
-?>
-
-</body>
-</html>
+  <script type="text/javascript" src="js/table.js"></script>

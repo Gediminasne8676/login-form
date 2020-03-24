@@ -1,8 +1,8 @@
+
 <?php 
-include "functions.php";
+include "header.php";
 include "database.php";
-session_start();
-ob_start();
+include "functions.php";
 
 function login_user($username, $password){//prisijungimo funkcija
     global $connection;//atsitempiam global connection kintamaji
@@ -28,11 +28,12 @@ function login_user($username, $password){//prisijungimo funkcija
         $_SESSION['user_id'] = $db_user_id;//sesijai priskirta kintamieji
         $_SESSION['username'] = $username;
         // $_SESSION['password'] = $password;//zinau jog negalima laikyt passwordu sesijoje
-        
+
         header("Location: ../index.php");//po prisijungimo persiunciama i index.php
 
         } 
         else {
+
             header("Location: ../index.php");//jeigu neiseina prisijungti vistiek persiunciama i index.php
         }
 }
@@ -49,5 +50,7 @@ global $connection;
 
     login_user($username, $password);//siunciam prisijungimo parametrus i prisijungimo funkcija
 }
+
+
 
 ?>
